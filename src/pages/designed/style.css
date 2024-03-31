@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;500&display=swap');
+
+@import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	transition: .3s ease-out;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+
+body {
+	background-color: #5555e3;
+	color: #ffffff;
+	font-family: "Urbanist", sans-serif, monospace;
+	max-width: 100vw;
+	animation-name: loader;
+	animation-duration: 4s;
+	animation-delay: 0s;
+}
+
+body>section.main {
+	background-color: #eee;
+	background-image: url("/src/media/fti2.png");
+	background-repeat: repeat-x;
+	background-size: contain;
+	background-position-y: 100%;
+}
+
+@keyframes loader {
+	25% {
+		clip-path: circle(5% at 50% 100%);
+	}
+
+	50% {
+		clip-path: circle(5% at 50% 50%);
+
+	}
+
+	75% {
+		clip-path: circle(10% at 50% 50%);
+	}
+
+	100% {
+		clip-path: circle(100% at 50% 50%);
+	}
+}
+
+
+
+button,
+.btn {
+	padding: 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	font-family: Urbanist, monospace;
+	filter: drop-shadow(1px 1rem 1.5rem #99999940);
+	transition: .2s ease-out;
+	cursor: pointer;
+
+}
+
+.btn:hover {
+	filter: drop-shadow(1px 1rem 1.5rem #1e1e4370);
+	z-index: 5;
+}
+
+.btn-primary {
+	background-color: #5555e3;
+	color: #fff;
+	animation: move 1.5s 8s forwards;
+	opacity: 0%;
+	transform: translateY(25px);
+	filter: drop-shadow(1px 1rem 1.5rem #99999960);
+}
+
+.btn-primary:hover {
+	background-color: #4a4ab5;
+	color: #fff;
+}
+
+.btn-secondary {
+	background-color: #fff;
+	color: #5555e3;
+	animation: move 1.8s 8.5s forwards;
+	opacity: 0%;
+	transform: translateY(30px);
+}
+
+.btn-secondary:hover {
+	background-color: #eee;
+	color: #5555e3;
+}
+
+body>div.gallery {
+	margin: 3rem 0;
+	display: grid;
+	grid-gap: 4rem;
+}
+
+body>div.gallery>div.org {
+	width: 90vw;
+	margin: auto auto;
+}
+
+body>div.gallery>div.org>div.title {
+	padding: 1rem 0 2rem 0;
+}
+
+body>div.gallery>div.org>div.works {
+	padding: 1rem;
+	border: 2x solid yellow;
+}
+
+
+/* 'gallery' div-এর জন্য CSS */
+.gallerysub {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 1rem;
+	background-color: #eee;
+	padding: 1rem .5rem;
+	width: 90vw;
+	margin: auto auto;
+	border-radius: .5rem;
+	color: #222;
+}
+
+.gallerysub img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #ddd;
+	transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+	body>div.gallery {
+		display: unset;
+		width: 80vw;
+		margin: auto auto;
+	}
+
+	.gallerysub {
+		padding: 1rem;
+		grid-gap: 1.5rem;
+		width: 70vw;
+		grid-template-columns: repeat(1fr, 1fr);
+		margin: auto auto;
+	}
+
+	.title {
+		text-align: center;
+		padding: 1rem;
+	}
+
+	.gallery-image:hover {
+		transform: scale(1.1);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+}
+
+/* 'gallery-image' ছবির জন্য CSS */
+.gallery-image {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	transition: all 0.3s ease-in-out;
+}
+
+/* 'gallery-image' ছবির উপরে হভার করার সময় CSS */
+.gallery-image:hover {
+	transform: scale(1.5);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 'image-viewer' div-এর জন্য CSS */
+
+/* 'image-viewer' div-এর ভিতরে 'img' ট্যাগ-এর জন্য CSS */
+
+
+/* 'close-image' বোতামের জন্য CSS */
+
+
+/* 'close-image' বোতামের উপরে হভার করার সময় CSS */
+
+
+/* মিডিয়াক্যোয়ারী - মোবাইল ডিভাইসের জন্য */
+@media (max-width: 768px) {
+	.gallery {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	}
+}
