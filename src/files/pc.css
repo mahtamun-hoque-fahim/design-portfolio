@@ -1,40 +1,48 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	body>section.home {
-
+		background-image: url("/src/media/fti2.png");
 		background-position-y: 130%;
 	}
 
 	body>section.home>div.cta {
 		margin: 0 0 0 3vw;
 	}
+
 	body>section.home>div.cta>a:nth-child(1)>button {
 		filter: drop-shadow(1px 1rem 1.5rem #1e1e4330);
-		
+
 	}
-	.nav__item{
-		width:max-content;
+
+	.nav__item {
+		width: max-content;
 	}
+
 	.footer__addr {
-		margin-right:1rem;
+		margin-right: 1rem;
 	}
-	.legal{
+
+	.legal {
 		padding: 3rem 0 1rem 0;
 	}
 
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+	body>section.home{
+		background-image: url("/src/media/fti2.png");
+	}
 
-body>section.home>main>p:nth-child(1) {
-	font-size: 2rem;
-}
+	body>section.home>main>p:nth-child(1) {
+		font-size: 2rem;
+	}
 
-body>section.home>main>p:nth-child(2) {
-	font-size: 2.5rem;
-}
+	body>section.home>main>p:nth-child(2) {
+		font-size: 2.5rem;
+	}
 
-body>section.home>main>p:nth-child(3) {
-	font-size: 1.8rem;
+	body>section.home>main>p:nth-child(3) {
+		font-size: 1.8rem;
+	}
 }
